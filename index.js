@@ -7,13 +7,13 @@ window.addEventListener('load',function(){
 	focus.addEventListener('mouseenter',function(){
 		arrow_l.style.display='block';
 		arrow_r.style.display='block';
-		clearInterval(timer);
-		timer=null;
+		clearInterval(timer_global);
+		timer_global=null;
 	});
 	focus.addEventListener('mouseleave',function(){
 		arrow_l.style.display='none';
 		arrow_r.style.display='none';
-		timer=setInterval(function(){
+		timer_global=setInterval(function(){
 			arrow_r.click();
 			},2000);
 	});
@@ -84,7 +84,7 @@ window.addEventListener('load',function(){
 		}
 		ol.children[circle].className='current';
 	}
-	var timer=setInterval(function(){
+	var timer_global=setInterval(function(){
 		arrow_r.click();
 	},2000);
 });
