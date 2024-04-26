@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>轮播图演示</title>
+		<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border:0;
+			vertical-align:center;
+		}
+		li{
+			list-style:none;
+		}
+		.fl{
+			float:left;
+		}
+		.focus{
+			position:relative;
+			width:407px;
+			height:337px;
+			background-color:purple;
+			overflow:hidden;
+		}
+		.focus ul{
+			position:absolute;
+			top:0;
+			left:0;
+			width:600%;
+		}
+		.focus ul li{
+			float:left;
+		}
+		.arrow-l,
+		.arrow-r{
+			display:none;
+			position:absolute;
+			top:50%;
+			margin-top:-20px;
+			width:24px;
+			height:40px;
+			background-color:rgba(0,0,0.3);
+			text-align:center;
+			line-height:40px;
+			color:#fff;
+			font-family:"icomoom";
+			font-size:18px;
+			z-index:2;
+		}
+		.arrow-r{
+			right:0;
+		}
+		.circle{
+			position:absolute;
+			bottom:10px;
+			left:50px;
+		}
+		.circle li{
+			float:left;
+			width:8px;
+			height:8px;
+			border:2px solid rgbs(255,255,255,0.5);
+			margin:0 3px;
+			border-radius:50%;
+			cursor:pointer;
+		}
+		.current{
+			background-color:#fff;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="focus fl">
+			<a href="javascript:;" class="arrow-l">&lt</a>
+			<a href="javascript:;" class="arrow-r">&gt</a>
+			<ul>
+				<li>
+					<a href="#"><img src="./images/1.jpg"></a>
+				</li>
+				<li>
+					<a href="#"><img src="./images/2.jpg"></a>
+				</li>
+				<li>
+					<a href="#"><img src="./images/3.jpg"></a>
+				</li>
+				<li>
+					<a href="#"><img src="./images/4.jpg"></a>
+				</li>		
+			</ul>
+			<ol class="circle">
+			</ol>
+		</div>
+		<script src="animate.js"></script>		
+		<script src="index.js"></script>
+	</body>
+</html>
